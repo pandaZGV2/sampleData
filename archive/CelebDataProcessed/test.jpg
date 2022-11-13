@@ -1,0 +1,9 @@
+import os
+ 
+os.chdir('.')
+print(os.getcwd())
+ 
+for count, f in enumerate(os.listdir()):
+    f_name, f_ext = os.path.splitext(f)
+    new_name = f'{f_name}{".jpg"}'
+    os.rename(f, new_name)
